@@ -55,6 +55,12 @@ build CMakeFiles/test.dir/main.c.obj: C_COMPILER__test_Debug D$:/c$ and$ cpp$ so
   OBJECT_DIR = CMakeFiles\test.dir
   OBJECT_FILE_DIR = CMakeFiles\test.dir
 
+build CMakeFiles/test.dir/main2.c.obj: C_COMPILER__test_Debug D$:/c$ and$ cpp$ source/test/main2.c || cmake_object_order_depends_target_test
+  DEP_FILE = CMakeFiles\test.dir\main2.c.obj.d
+  FLAGS = -g -O0 -fno-stack-protector -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\test.dir
+  OBJECT_FILE_DIR = CMakeFiles\test.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target test
@@ -63,7 +69,7 @@ build CMakeFiles/test.dir/main.c.obj: C_COMPILER__test_Debug D$:/c$ and$ cpp$ so
 #############################################
 # Link the executable test.exe
 
-build test.exe: C_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/main.c.obj
+build test.exe: C_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/main.c.obj CMakeFiles/test.dir/main2.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\test.dir

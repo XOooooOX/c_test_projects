@@ -3,6 +3,6 @@ project(test C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(test main.c)
+add_executable(test main.c main2.c)
 
 target_compile_options(test PRIVATE -O0 -fno-stack-protector -g)

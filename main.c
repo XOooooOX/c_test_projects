@@ -17,7 +17,7 @@ void test2() {
     printf("x = %d, addr = %p\n", x, (void*)&x);
 }
 
-int main() {
+int main3() {
 
     puts("-------");
     int *p;
