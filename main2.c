@@ -24,7 +24,7 @@ typedef struct {
 int add(int a,int b) { return  a + b;}
 int subtract(int a,int b) { return  a - b;}
 
-int main(){
+int main2(){
 
     int (*func_ptr)(int,int);
 
