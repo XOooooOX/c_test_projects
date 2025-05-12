@@ -12,6 +12,7 @@
 #include <string.h>
 
 
+
 int main3() {
     system("chcp 65001");
 
