@@ -1,0 +1,31 @@
+| کد خروجی | نام/سیگنال                        | معنی و کاربرد                                                |
+| -------- | --------------------------------- | ------------------------------------------------------------ |
+| `0`      | `EXIT_SUCCESS`                    | اجرای موفقیت‌آمیز برنامه                                     |
+| `1`      | `EXIT_FAILURE` یا `GENERAL_ERROR` | خطای کلی در اجرا (خطای نامشخص)                               |
+| `2`      | `MISUSE_OF_BUILTIN`               | استفاده نادرست از built-in های shell                         |
+| `126`    | `COMMAND_INVOKED_CANNOT_EXECUTE`  | فایل پیدا شد ولی قابل اجرا نیست (Permission Denied)          |
+| `127`    | `COMMAND_NOT_FOUND`               | دستور یا فایل اجرایی یافت نشد                                |
+| `128`    | `INVALID_EXIT_ARG`                | مقدار نامعتبر برای exit یا شرایط عجیب                        |
+| `129`    | `SIGHUP`                          | Hangup – قطع ارتباط ترمینال                                  |
+| `130`    | `SIGINT`                          | کاربر برنامه را با `Ctrl+C` قطع کرده                         |
+| `131`    | `SIGQUIT`                         | خروج با `Ctrl+\` (core dump)                                 |
+| `132`    | `SIGILL`                          | دستور غیرمجاز اجرا شده (illegal instruction)                 |
+| `133`    | `SIGTRAP`                         | breakpoint trap                                              |
+| `134`    | `SIGABRT`                         | فراخوانی `abort()`                                           |
+| `135`    | `SIGBUS`                          | خطای دسترسی به حافظه (bus error)                             |
+| `136`    | `SIGFPE`                          | خطای محاسباتی مثل تقسیم بر صفر                               |
+| `137`    | `SIGKILL`                         | پروسه با `kill -9` متوقف شده                                 |
+| `138`    | `SIGUSR1`                         | سیگنال کاربر ۱                                               |
+| `139`    | `SIGSEGV`                         | خطای دسترسی به حافظه (segmentation fault)                    |
+| `140`    | `SIGUSR2`                         | سیگنال کاربر ۲                                               |
+| `141`    | `SIGPIPE`                         | نوشتن روی pipe شکسته                                         |
+| `142`    | `SIGALRM`                         | پایان زمان تایمر                                             |
+| `143`    | `SIGTERM`                         | پایان معمول (با `kill` یا سیستم)                             |
+| `255`    | `RESERVED`                        | مقدار رزرو شده برای خطاهای ناشناخته یا overflow در exit code |
+
+
+exit_code = 128 + شماره سیگنال
+
+
+./myprogram
+echo $?

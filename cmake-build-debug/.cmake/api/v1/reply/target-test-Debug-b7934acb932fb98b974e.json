@@ -133,6 +133,13 @@
 				3,
 				4
 			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				5
+			]
 		}
 	],
 	"sources" : 
@@ -166,6 +173,11 @@
 			"compileGroupIndex" : 0,
 			"path" : "main5.c",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "exit_codes.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
