@@ -29,3 +29,46 @@ exit_code = 128 + شماره سیگنال
 
 ./myprogram
 echo $?
+
+
+
+tabdil add be hex
+
+hex = 1 2 3 4 5 6 7 8 9 A B C D E F
+
+450 -> 28 * 16 = 448 - pass 28 ta 16 darim va 2 bagimande => 2
+28 -> pass 1 done 16 darim va 12 ta bagimande  => c
+1 -> 0 => 1
+va be sorat barax => 1C2
+
+tabdil horof be hex
+aval moadel add az ascii bad ravi bala
+
+tabdil be binary
+taghsim be 2 va bad be sorat payyin be bala
+
+
+tabdil be base 64
+A-Z 26 ta
+a-z 26 ta
+0-9 10 ta
++ / 2 ta
+agar tol vorody mazrab 3 nabashad ba = por mishavad
+
+Man - ascii code: M=77 a=97 n=110
+-> binary
+77 = 01221101
+97 = 01100001
+110 = 01101110
+
+shekastan be 6 bit va tabdil be decimal
+010011 -> 19
+010110 -> 22
+000101 -> 5
+101110 -> 46
+tabdil be base 64
+19 -> T
+22 -> W
+5 -> F
+46 -> u
+TWFu

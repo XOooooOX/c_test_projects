@@ -2,11 +2,26 @@
 // Created by M.Ghelichkhani on 5/12/2025.
 //
 
+// agar dar file header gozashte shavad va in file chand bar ham dar yek file digar inject shavad moshkerli pish nemiad
+#pragma once
+// ravesh sonaty
+#ifndef MYHEADER_H
+#define MYHEADER_H
+
+int sum(int a, int b);
+
+#endif // MYHEADER_H
+
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
 #include "exit_codes.h"
+
+#define CONDITION
+// gcc -D CONDITION -E main.c
+
+#define CREATE_TRACE_POINTS
 
 #define ALI 5
 
@@ -27,8 +42,22 @@
 
 #define LOOP5(...)LOOP_1(__VA_ARGS__)
 
+// like null in C++
+#define nullptr ((void *)0)
 
 int main(){
+
+    // all type is valid
+
+    int* ptr1 = NULL;
+    int * ptr2 = NULL;
+    int *ptr3 = nullptr;
+
+#ifdef CONDITION
+    puts("condition");
+#elif
+    puts("no condition");
+#endif
 
     LOOP5(copy paste cut)
     LOOP5(copy,paste,cut)
@@ -79,6 +108,24 @@ int main(){
     }
 
     fclose(file);
+
+    // zamany ke pointer ra ++ mikonim baraye mesal
+    // bar asad no type jelo miravad, agar int bashad 4 byte jelo miravad, agar char bashad 1 byte
+
+    int var = 1;
+
+    int * int_ptr = NULL;
+    int_ptr = &var;
+
+    char * char_ptr = NULL;
+    char_ptr = (char*)&var;
+
+    printf("befor -> intptr = %u,charptr = %u\n",(unsigned int)int_ptr,(unsigned int)char_ptr);
+
+    int_ptr++;
+    char_ptr++;
+
+    printf("after -> intptr = %u,charptr = %u\n",(unsigned int)int_ptr,(unsigned int)char_ptr);
     return 0;
 }
 
