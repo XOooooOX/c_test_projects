@@ -45,7 +45,7 @@ int sum(int a, int b);
 // like null in C++
 #define nullptr ((void *)0)
 
-int main(){
+int main5(){
 
     // all type is valid
 
